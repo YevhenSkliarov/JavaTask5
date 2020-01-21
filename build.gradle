@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.it'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.141.59'
+}
+
+//override grandle test step to run tests from testNg.xml
+test(){
+    useTestNG(){
+        suites "src\\test\\resources\\testNg.xml"
+    }
+}
