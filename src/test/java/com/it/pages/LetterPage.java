@@ -3,7 +3,11 @@ package com.it.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class LetterPage extends BasePage {
+    public String sendingTime;
     @FindBy(id = "to")
     private WebElement inputTo;
 
@@ -26,6 +30,7 @@ public class LetterPage extends BasePage {
         inputSubject.sendKeys(subject);
         inputBody.sendKeys(body);
         send.click();
+        sendingTime = new SimpleDateFormat("HH:mm").format(new Date());
     }
 
     public String getLetterSubject() {
