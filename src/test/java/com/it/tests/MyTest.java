@@ -17,8 +17,6 @@ public class MyTest extends BaseTest {
         app.dashboard.createLetter();
         app.letter.sendLetter(letter.to, letter.subject, letter.body);
         app.dashboard.openLastIncomeMessages();
-        Assert.assertEquals(app.letter.getLetterSubject(), letter.subject);
-        //Assert.assertEquals(app.letter.getLetterTime(), app.common.getCurrentTime());
-        Assert.assertEquals(app.letter.getLetterTime(), app.letter.sendingTime);
+        Assert.assertEquals(app.letter.getLetterData(), letter);
     }
 }

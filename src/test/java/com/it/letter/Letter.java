@@ -31,10 +31,6 @@ public class Letter {
 
     @Override
     public String toString() {
-        return "Letter{" +
-                "to='" + to + '\'' +
-                ", subject='" + subject + '\'' +
-                ", body='" + body + '\'' +
-                '}';
+        return  ("to= " + to + ", subject= " + subject + ", body= " + body).trim();
     }
 }

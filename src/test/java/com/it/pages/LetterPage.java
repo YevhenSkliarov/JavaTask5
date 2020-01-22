@@ -1,5 +1,6 @@
 package com.it.pages;
 
+import com.it.letter.Letter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -20,25 +21,34 @@ public class LetterPage extends BasePage {
     @FindBy(name = "send")
     private WebElement send;
 
-    @FindBy(xpath = "(//div[@class='received']/div[@class='field_value']/span)[1]")
-    private WebElement time;
+    @FindBy(xpath = "(//div[@class='field_value'])[2]")
+    private WebElement to;
     @FindBy(xpath = "//div[@class='message_header clear']/h3")
     private WebElement subject;
+    @FindBy(xpath = "//div[@class='message_body']")
+    private WebElement body;
 
     public void sendLetter(String to, String subject, String body) {
         inputTo.sendKeys(to);
         inputSubject.sendKeys(subject);
         inputBody.sendKeys(body);
         send.click();
-        sendingTime = new SimpleDateFormat("HH:mm").format(new Date());
     }
 
-    public String getLetterSubject() {
+    public String getSubject() {
         return subject.getText();
     }
 
-    public String getLetterTime() {
-        return time.getText();
+    public String getTo() {
+        return to.getText();
+    }
+
+    public String getBody() {
+        return body.getText();
+    }
+
+    public Letter getLetterData() {
+        return new Letter(getTo(), getSubject(), getBody());
     }
 
 }
