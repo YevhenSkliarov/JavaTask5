@@ -1,6 +1,5 @@
 package com.it.pages;
 
-import com.it.letter.CreateLetter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
