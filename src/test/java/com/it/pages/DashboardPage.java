@@ -23,7 +23,7 @@ public class DashboardPage extends BasePage {
         newLetter.click();
     }
 
-    public void openLastIncomeMessages() {
+    public void openLastIncomeMessage() {
         income.click();
         lastLetter.click();
     }

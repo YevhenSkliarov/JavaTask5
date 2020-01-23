@@ -15,7 +15,7 @@ public class MyTest extends BaseTest {
     public void testSendLetter() {
         app.dashboard.createLetter();
         app.letter.sendLetter(letter);
-        app.dashboard.openLastIncomeMessages();
+        app.dashboard.openLastIncomeMessage();
         Assert.assertEquals(app.incomeLetter.getLetterData(), letter);
     }
 }
