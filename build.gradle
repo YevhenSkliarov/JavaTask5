@@ -22,3 +22,9 @@ test(){
         suites "src\\test\\resources\\testNg.xml"
     }
 }
+task firefox(type:Test){
+    systemProperty "driver", "firefox"
+    useTestNG(){
+        suites "src\\test\\resources\\testNg.xml"
+    }
+}

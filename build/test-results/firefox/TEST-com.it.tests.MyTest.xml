@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.it.tests.MyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-01-25T09:07:27" hostname="DESKTOP-GPJ503C" time="32.922">
+  <properties/>
+  <testcase name="testLogin" classname="com.it.tests.MyTest" time="0.125"/>
+  <testcase name="testSendLetter" classname="com.it.tests.MyTest" time="32.797"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[JavaScript warning: https://i3.i.ua/js/i/richtextmulti2201_v2.y3551048b.js, line 462: unreachable code after return statement
+JavaScript warning: https://i3.i.ua/js/i/richtextmulti2201_v2.y3551048b.js, line 462: unreachable code after return statement
+JavaScript error: https://content.admixer.net/test1/bed4ac2e-9358-4bc5-8e53-9bd1853d1467/85cdcbeb-644f-4069-bb3d-3b10653c9a8e/js/lazer_november_960x180.js, line 14: TypeError: cjs.Bitmap is not a constructor
+JavaScript error: https://mbox2.i.ua/list/INBOX/?_rand=1943249899, line 38: TypeError: AdobeAn.getComposition is not a function
+]]></system-err>
+</testsuite>

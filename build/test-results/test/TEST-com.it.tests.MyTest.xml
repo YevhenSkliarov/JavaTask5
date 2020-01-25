@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.it.tests.MyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-01-21T21:24:24" hostname="DESKTOP-A9VLQL2" time="7.696">
-  <properties/>
-  <testcase name="testLogin" classname="com.it.tests.MyTest" time="0.026"/>
-  <testcase name="testSendLetter" classname="com.it.tests.MyTest" time="7.669"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
