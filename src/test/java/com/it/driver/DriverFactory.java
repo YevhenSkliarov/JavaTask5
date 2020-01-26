@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
+import static com.it.common.Constants.*;
 
 public class DriverFactory {
     public static WebDriver getDriver() {
@@ -18,9 +19,9 @@ public class DriverFactory {
             driver = new ChromeDriver();
         }
         driver.manage().window().fullscreen();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(BASE_IMPLICITLY_WAIT, TimeUnit.SECONDS);
         //driver.switchTo().activeElement();//switchTo - working with iframe
-        driver.get("https://www.i.ua/");
+        driver.get(BASE_URL);
         return driver;
     }
 }

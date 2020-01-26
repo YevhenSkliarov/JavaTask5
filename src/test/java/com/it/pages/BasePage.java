@@ -1,16 +1,16 @@
 package com.it.pages;
 
-import com.it.driver.DriverFactory;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
+import com.it.driver.MyDriver;
 
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-    static protected WebDriver driver = DriverFactory.getDriver();
+    static protected MyDriver driver = MyDriver.getMyDriver();
+
+    protected WebDriverWait BASE_DRIVER_WAIT = new WebDriverWait(driver, 10);
 
     public BasePage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 }
