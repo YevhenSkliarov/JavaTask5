@@ -2,15 +2,18 @@ package com.it.driver;
 
 import com.it.common.Constants;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import static com.it.common.Constants.*;
+
 public class MyDriver implements WebDriver {
     WebDriver driver;
-
+    public static WebDriverWait BASE_DRIVER_WAIT;
     @Override
     public void get(String url) {
         driver.get(url);
@@ -98,7 +101,7 @@ public class MyDriver implements WebDriver {
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         try {
             List<WebElement> list = driver.findElements(locator);
-            driver.manage().timeouts().implicitlyWait(Constants.BASE_IMPLICITLY_WAIT, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(BASE_IMPLICITLY_WAIT, TimeUnit.SECONDS);
             result = list.size() != 0 && list.get(0).isDisplayed();
         } catch (StaleElementReferenceException | NoSuchElementException e) {
 
@@ -112,5 +115,6 @@ public class MyDriver implements WebDriver {
 
     private MyDriver() {
         driver = DriverFactory.getDriver();
+        BASE_DRIVER_WAIT = new WebDriverWait(driver,10);
     }
 }

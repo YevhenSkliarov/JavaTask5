@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static com.it.driver.MyDriver.BASE_DRIVER_WAIT;
+
 public class DashboardPage extends BasePage {
     @FindBy(xpath = "//span[@class='sn_menu_title']")
     private WebElement lblUserEmail;
