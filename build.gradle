@@ -28,3 +28,10 @@ task firefox(type:Test){
         suites "src\\test\\resources\\testNg.xml"
     }
 }
+
+task remote(type:Test){
+    systemProperty "driver", "remote"
+    useTestNG(){
+        suites "src\\test\\resources\\testNg.xml"
+    }
+}
